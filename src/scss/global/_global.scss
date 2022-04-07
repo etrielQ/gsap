@@ -1,0 +1,26 @@
+.transition-fade {
+  transition: 0.4s;
+  opacity: 1;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+
+body {
+  font-family: $font-family-base;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility !important;
+}
+
+.section {
+  padding: 150px 0;
+
+  @include bp(tablet) {
+    padding: 100px 0;
+  }
+  @include bp(tablet-small) {
+    padding: 50px 0;
+  }
+}

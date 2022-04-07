@@ -1,0 +1,124 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+@for $i from 1 through 10 {
+  .mb-#{$i} {
+    margin-bottom: #{$i}rem;
+  }
+  .mt-#{$i} {
+    margin-top: #{$i}rem;
+  }
+  .ml-#{$i} {
+    margin-left: #{$i}rem;
+  }
+  .mr-#{$i} {
+    margin-right: #{$i}rem;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.icon-sprite {
+  &__title {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 4rem;
+  }
+  &__wrapper {
+    display: flex;
+    flex-flow: wrap;
+    width: 100%;
+  }
+  &__item {
+    box-sizing: border-box;
+    width: calc(25% - 1.5%);
+    margin-right: 2%;
+    margin-top: 2%;
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__preview {
+    width: 100%;
+    height: 200px;
+    border: 1px solid rgba(#000, 0.1);
+    padding: 20px;
+    margin: 10px 0;
+    & > svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.icon-font {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  & > svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  max-width: 1360px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  &--sm {
+    max-width: 1280px;
+  }
+
+  &,
+  &--sm {
+    @include bp(laptop-l) {
+      max-width: 1150px;
+    }
+    @include bp(desktop) {
+      max-width: 960px;
+    }
+    @include bp(tablet) {
+      max-width: 720px;
+    }
+    @include bp(tablet-small) {
+      max-width: 520px;
+    }
+    @include bp(mobile) {
+      max-width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @include bp(mobile-x-small) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.header {
+  background: blue;
+  color: #fff;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 12;
+  transition: $transition;
+  &--pinned {
+    transform: translateY(0%);
+  }
+  &--unpinned {
+    transform: translateY(-100%);
+  }
+}
